@@ -207,9 +207,40 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7fcaabb2fef8c910e7f4c7ce9f67a1283a1715879a7c230ca9d6d1ae31f16d91"
 
 [[package]]
-name = "fawkes-crypto"
-version = "4.3.4"
-source = "git+https://github.com/zkBob/fawkes-crypto?branch=multicore-wasm#ffb1b701a2419cbf8026bab333a7af2f24871dde"
+name = "fawkes-crypto-bellman_ce"
+version = "0.3.5"
+source = "git+https://github.com/zkBob/phase2-bn254?branch=multicore-wasm#f484dbe81e1fd5707de4168a928c5a51e0389add"
+dependencies = [
+ "bit-vec",
+ "byteorder",
+ "cfg-if 0.1.10",
+ "fawkes-crypto-pairing_ce",
+ "rand 0.4.6",
+]
+
+[[package]]
+name = "fawkes-crypto-keccak256"
+version = "0.1.1"
+dependencies = [
+ "fawkes-crypto-zkbob",
+ "hex",
+ "itertools",
+]
+
+[[package]]
+name = "fawkes-crypto-pairing_ce"
+version = "0.18.1"
+source = "git+https://github.com/zkBob/phase2-bn254?branch=multicore-wasm#f484dbe81e1fd5707de4168a928c5a51e0389add"
+dependencies = [
+ "byteorder",
+ "ff_ce",
+ "rand 0.4.6",
+]
+
+[[package]]
+name = "fawkes-crypto-zkbob"
+version = "4.5.0"
+source = "git+https://github.com/zkBob/fawkes-crypto?branch=fawkes-crypto-zkbob#b2898b5c58af209f6d51844c31985aa3ebe551f6"
 dependencies = [
  "bit-vec",
  "blake2-rfc_bellman_edition",
@@ -228,40 +259,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "fawkes-crypto-bellman_ce"
-version = "0.3.5"
-source = "git+https://github.com/zkBob/phase2-bn254?branch=multicore-wasm#f484dbe81e1fd5707de4168a928c5a51e0389add"
-dependencies = [
- "bit-vec",
- "byteorder",
- "cfg-if 0.1.10",
- "fawkes-crypto-pairing_ce",
- "rand 0.4.6",
-]
-
-[[package]]
-name = "fawkes-crypto-keccak256"
-version = "0.1.1"
-dependencies = [
- "fawkes-crypto",
- "hex",
- "itertools",
-]
-
-[[package]]
-name = "fawkes-crypto-pairing_ce"
-version = "0.18.1"
-source = "git+https://github.com/zkBob/phase2-bn254?branch=multicore-wasm#f484dbe81e1fd5707de4168a928c5a51e0389add"
-dependencies = [
- "byteorder",
- "ff_ce",
- "rand 0.4.6",
-]
-
-[[package]]
 name = "fawkes-crypto_derive"
 version = "4.3.0"
-source = "git+https://github.com/zkBob/fawkes-crypto?branch=multicore-wasm#ffb1b701a2419cbf8026bab333a7af2f24871dde"
+source = "git+https://github.com/zkBob/fawkes-crypto?branch=fawkes-crypto-zkbob#b2898b5c58af209f6d51844c31985aa3ebe551f6"
 dependencies = [
  "proc-macro2 1.0.51",
  "quote 1.0.23",
@@ -271,7 +271,7 @@ dependencies = [
 [[package]]
 name = "ff-uint"
 version = "0.2.4"
-source = "git+https://github.com/zkBob/fawkes-crypto?branch=multicore-wasm#ffb1b701a2419cbf8026bab333a7af2f24871dde"
+source = "git+https://github.com/zkBob/fawkes-crypto?branch=fawkes-crypto-zkbob#b2898b5c58af209f6d51844c31985aa3ebe551f6"
 dependencies = [
  "borsh",
  "byteorder",
@@ -290,7 +290,7 @@ dependencies = [
 [[package]]
 name = "ff-uint_derive"
 version = "0.2.4"
-source = "git+https://github.com/zkBob/fawkes-crypto?branch=multicore-wasm#ffb1b701a2419cbf8026bab333a7af2f24871dde"
+source = "git+https://github.com/zkBob/fawkes-crypto?branch=fawkes-crypto-zkbob#b2898b5c58af209f6d51844c31985aa3ebe551f6"
 dependencies = [
  "num-bigint 0.3.3",
  "num-integer",
@@ -470,9 +470,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.17.0"
+version = "1.17.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6f61fba1741ea2b3d6a1e3178721804bb716a68a6aeba1149b5d52e3d464ea66"
+checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
 
 [[package]]
 name = "opaque-debug"
@@ -654,7 +654,7 @@ checksum = "3e75f6a532d0fd9f7f13144f392b6ad56a32696bfcd9c78f797f16bbb6f072d6"
 [[package]]
 name = "seedbox"
 version = "0.2.0"
-source = "git+https://github.com/zkBob/fawkes-crypto?branch=multicore-wasm#ffb1b701a2419cbf8026bab333a7af2f24871dde"
+source = "git+https://github.com/zkBob/fawkes-crypto?branch=fawkes-crypto-zkbob#b2898b5c58af209f6d51844c31985aa3ebe551f6"
 dependencies = [
  "rand_chacha 0.3.1",
  "rand_core 0.6.4",
