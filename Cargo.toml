@@ -1,6 +1,8 @@
 [package]
 name = "fawkes-crypto-zkbob-keccak256"
 version = "0.1.1"
+homepage = "https://github.com/zkbob/keccak"
+repository = "https://github.com/zkbob/keccak"
 edition = "2021"
 description = "Keccak256 hash function for Fawkes Crypto"
 authors = ["Igor Gulamov"]
