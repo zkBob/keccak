@@ -18,7 +18,7 @@ hex = "0.3.1"
 
 [dependencies.fawkes-crypto]
 git = "https://github.com/zkBob/fawkes-crypto"
-branch = "fawkes-crypto-zkbob"
+branch = "master"
 package = "fawkes-crypto-zkbob"
 version = "4.5.0"
 features = ["rand_support"]
