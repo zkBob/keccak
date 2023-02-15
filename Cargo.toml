@@ -1,5 +1,5 @@
 [package]
-name = "fawkes-crypto-keccak256"
+name = "fawkes-crypto-zkbob-keccak256"
 version = "0.1.1"
 edition = "2021"
 description = "Keccak256 hash function for Fawkes Crypto"
