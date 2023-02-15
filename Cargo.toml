@@ -1,6 +1,8 @@
 [package]
-name = "fawkes-crypto-keccak256"
+name = "fawkes-crypto-zkbob-keccak256"
 version = "0.1.1"
+homepage = "https://github.com/zkbob/keccak"
+repository = "https://github.com/zkbob/keccak"
 edition = "2021"
 description = "Keccak256 hash function for Fawkes Crypto"
 authors = ["Igor Gulamov"]
@@ -12,8 +14,15 @@ crate-type = ["rlib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-fawkes-crypto = { version = "4.3.3", features = ["rand_support"] }
 hex = "0.3.1"
+
+[dependencies.fawkes-crypto]
+git = "https://github.com/zkBob/fawkes-crypto"
+branch = "fawkes-crypto-zkbob"
+package = "fawkes-crypto-zkbob"
+version = "4.5.0"
+features = ["rand_support"]
+
 
 [dev-dependencies]
 itertools = "0.10.3"
